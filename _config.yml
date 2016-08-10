@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Brennan Chan Piano
+email: brennan.chan11@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Brennan Chan, Bachelor of Music, instructs piano lessons for beginners and intermediate pianists.
+  Accompanying for dance and singing.
+  Located in Kitsilano, Vancouver, UBC
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
@@ -27,3 +27,31 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 theme: minima
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "my-site"
+  -
+    scope:
+      path: "projects"
+      type: "pages" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "project" # overrides previous default layout
+      author: "Brennan Chan"
+
+mapping:
+    provider: google_js
+    api_key: AIzaSyCEe8SQUgomwD8VtYYd9fxr8Ef0iupui6E
+    zoom: 10
+    dimensions:
+        width: 600
+        height: 400

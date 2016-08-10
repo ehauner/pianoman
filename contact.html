@@ -1,0 +1,50 @@
+---
+layout: default
+permalink: /contact
+
+mapping:
+    locations:
+        - title: Kitsilano, Vancouver
+          latitude: 49.268658
+          longitude: -123.176724
+        - title: Blueridge, North Vancouver
+          latitude: 49.317625
+          longitude: -123.006173
+---
+
+<div class="contact">
+
+  <h1 class="page-heading">Contact</h1>
+
+  <h2>604-910-2880</h2>
+  <h3>Free Consultation</h3>
+  <h3>2 studio locations: Kitsilano and North Vancouver</h3>
+
+  {% render_map 100%,400 %}
+
+  <h2>Questions?</h2>
+  <h3>Leave your contact details and I'll get back to you as soon as possible</h3>
+  <form action="https://formspree.io/ehauner@gmail.com"
+      method="POST">
+    <p>Name</p>
+    <input type="text" name="first">
+    <label for="first" style="display:block;">First</label>
+    <input type="text" name="last">
+    <label for="last" style="display:block;">Last</label>
+    <br>
+    <h3>Email</h3>
+    <input type="email" name="email">
+    <br>
+    <h3>Phone</h3>
+    <input type="phone" name="phone">
+    <br>
+    <select name="preferred">
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+    </select>
+    <input type="submit" value="Send">
+  </form>
+
+</div>
+
+{% include jekyll_mapping.html %}
