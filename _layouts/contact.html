@@ -1,0 +1,81 @@
+<head>
+  <!-- JQuery -->
+  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index">{{ site.title }}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li class="active"><a href="/contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="content">
+    <div class="text-center">
+      <h1 class="page-title">{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <div class="left-half">
+
+    {% render_map 100%,313 %}
+
+    <h5>2 studio locations: Kitsilano and North Vancouver</h5>
+    <h3>604-910-2880</h3>
+  </div>
+
+  <div class="right-half">
+
+    <form action="https://formspree.io/{{ site.email }}"
+        method="POST">
+      <input type="text" name="name" placeholder="Name">
+      <br>
+      <input type="email" name="email" placeholder="Email">
+      <br>
+      <input type="phone" name="phone" placeholder="Phone Number">
+      <br>
+      <textarea name="message" placeholder="Message" rows="4"></textarea>
+      <br>
+      <input class="send" type="submit" value="Send">
+    </form>
+
+    <h5>Free Consultation</h5>
+
+  </div>
+
+  <div class="clear"></div>
+
+</body>
+
+{% include jekyll_mapping.html %}
