@@ -16,6 +16,11 @@
   color: #595959;
 }
 
+.topless {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .left-half {
   width:50%;
   float:left;
@@ -74,14 +79,27 @@ input, textarea {
 }
 
 .overlay-button {
+  color:white;
   padding:8px;
-  margin: 5px;
+  margin: 20px;
   border-radius:5px;
   background-color: #0080ff;
   border: 0 none;
   transition: background-color 0.2s ease-in-out;
+  cursor:pointer;
 }
 
 .overlay-button:hover {
   background-color: #3399ff;
+  color: white;
+  text-decoration: none;
+}
+
+.opt-in {
+  background-color: #e6e6e6;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 0;
 }
