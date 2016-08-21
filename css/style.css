@@ -1,6 +1,6 @@
 * {
   font-family: 'Open Sans', sans-serif;
-  font-size:16px;
+  font-size:18px;
 }
 
 .navbar {
@@ -65,7 +65,7 @@ input, textarea {
 
 .send {
   background-color: #ffccf2;
-  width:20%;
+  width:100px;
   margin: 5px auto;
   transition: background-color 0.2s ease-in-out;
 }
