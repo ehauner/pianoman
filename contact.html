@@ -1,6 +1,6 @@
 ---
-title: Contact
-layout: contact
+title: contact
+layout: default
 permalink: /contact
 
 mapping:
@@ -12,3 +12,39 @@ mapping:
           latitude: 49.317625
           longitude: -123.006173
 ---
+
+
+<div style="overflow:auto;">
+
+  <div class="content">
+
+    <div class="left-half">
+
+      {% render_map 100%,300 %}
+
+      <h5>2 studio locations: Kitsilano and North Vancouver</h5>
+      <h3>604-910-2880</h3>
+    </div>
+
+    <div class="right-half">
+
+      <form action="https://formspree.io/{{ site.email }}"
+          method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <br>
+        <input type="email" name="email" placeholder="Email">
+        <br>
+        <input type="phone" name="phone" placeholder="Phone Number">
+        <br>
+        <textarea name="message" placeholder="Message" rows="4"></textarea>
+        <br>
+        <input class="send" type="submit" value="Send">
+      </form>
+
+      <h5>Free Consultation</h5>
+
+    </div>
+  </div>
+</div>
+
+{% include jekyll_mapping.html %}

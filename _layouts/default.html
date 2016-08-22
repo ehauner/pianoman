@@ -15,7 +15,7 @@
 
 <body>
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar {% if page.title %}navbar-default{% else %}navbar-inverse{% endif %}">
     <div class="content">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -32,53 +32,24 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="{{ site.github.url }}/about">About</a></li>
-            <li><a href="{{ site.github.url }}/services">Services</a></li>
-            <li class="active"><a href="{{ site.github.url }}/contact">Contact</a></li>
+            <li {% if page.title == "about" %}class="active"{% endif %}><a href="{{ site.github.url }}/about">About</a></li>
+            <li {% if page.title == "services" %}class="active"{% endif %}><a href="{{ site.github.url }}/services">Services</a></li>
+            <li {% if page.title == "contact" %}class="active"{% endif %}><a href="{{ site.github.url }}/contact">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </div>
   </nav>
 
-  <div class="content">
-    <div class="text-center">
-      <h1 class="page-title">{{ page.title }}</h1>
-    </div>
-  </div>
-
-  <div style="overflow:auto;">
-
+  {% if page.title %}
     <div class="content">
-
-      <div class="left-half">
-
-        {% render_map 100%,300 %}
-
-        <h5>2 studio locations: Kitsilano and North Vancouver</h5>
-        <h3>604-910-2880</h3>
-      </div>
-
-      <div class="right-half">
-
-        <form action="https://formspree.io/{{ site.email }}"
-            method="POST">
-          <input type="text" name="name" placeholder="Name">
-          <br>
-          <input type="email" name="email" placeholder="Email">
-          <br>
-          <input type="phone" name="phone" placeholder="Phone Number">
-          <br>
-          <textarea name="message" placeholder="Message" rows="4"></textarea>
-          <br>
-          <input class="send" type="submit" value="Send">
-        </form>
-
-        <h5>Free Consultation</h5>
-
+      <div class="text-center">
+        <h1 class="page-title">{{ page.title|capitalize }}</h1>
       </div>
     </div>
-  </div>
+  {% endif %}
+
+  {{ content }}
 
   <footer class="site-footer">
 
@@ -116,5 +87,3 @@
   </footer>
 
 </body>
-
-{% include jekyll_mapping.html %}
