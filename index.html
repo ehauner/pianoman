@@ -37,7 +37,7 @@ permalink: /index
   </h1>
     {% for post in site.posts limit:5 %}
         <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-        <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        <a class="post-title" href="{{ post.url | prepend: site.github.url }}">{{ post.title | escape }}</a><br>
         <p>{{ post.excerpt }}</p>
     {% endfor %}
 </div>
