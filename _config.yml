@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Accompanying for dance and singing.
   Located in Kitsilano, Vancouver, UBC
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
+url: "ehauner.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -56,4 +56,4 @@ mapping:
         width: 600
         height: 400
 
-permalink: /blog/:year/:month/:day/:title
+permalink: /:title
