@@ -50,11 +50,9 @@ defaults:
       author: "Brennan Chan"
 
 mapping:
-    provider: google_js
     api_key: AIzaSyCEe8SQUgomwD8VtYYd9fxr8Ef0iupui6E
-    zoom: 10
-    dimensions:
-        width: 600
-        height: 400
 
-permalink: /blog/:year/:month/:day/:title
+gems:
+    - jekyll-maps
+
+# permalink: /blog/:year/:month/:day/:title
