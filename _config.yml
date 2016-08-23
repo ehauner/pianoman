@@ -56,4 +56,4 @@ mapping:
         width: 600
         height: 400
 
-permalink: /blog/:year/:month/:day/:title
+permalink: blog/:year/:month/:day/:title
