@@ -9,6 +9,13 @@
   padding: 0 20px;
 }
 
+.create {
+  font-family: 'Montserrat', sans-serif;
+  font-size:90px;
+  letter-spacing: 12px;
+  text-shadow: 3px 2px black;
+}
+
 .navbar {
   margin-bottom: 0;
   border-radius:0;
@@ -47,7 +54,7 @@
 .image-overlay {
   text-align: center;
   position:relative;
-  width: 400px;
+  width: 425px;
   left:calc(50% - 200px);
   color:white;
   top:calc(8vw);
@@ -82,18 +89,34 @@ input, textarea {
 
 .overlay-button {
   color:white;
-  padding:8px;
+  padding:12px;
   margin: 20px;
-  border-radius:5px;
+  border-radius:8px;
   background-color: #0080ff;
-  border: 0 none;
+  border: 2px solid #0080ff;
   transition: background-color 0.2s ease-in-out;
+  transition: border 0.2s ease-out;
   cursor:pointer;
+  font-size: 14px;
+}
+
+.overlay-button.services {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  text-shadow: 2px 1px black;
 }
 
 .overlay-button:hover {
   background-color: #3399ff;
-  color: white;
+  border: 2px solid #3399ff;
+  color:white;
+  text-decoration: none;
+}
+
+.overlay-button.services:hover {
+  background-color: rgba(255, 255, 255, .8);
+  border: 2px solid white;
+  color:white;
   text-decoration: none;
 }
 
