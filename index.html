@@ -13,11 +13,17 @@ permalink: /index
     if (windowWidth < 500) {
       $('#create').css('font-size', '40px');
     }
+    else if (windowWidth > 1000){
+      $('#create').css('font-size', '160px');
+    }
   });
   $(window).on('resize', function() {
     var windowWidth = $(window).width();
     if (windowWidth < 500) {
       $('#create').css('font-size', '40px');
+    }
+    else if (windowWidth > 1000){
+      $('#create').css('font-size', '160px');
     }
     else {
       $('#create').css('font-size', '90px');
