@@ -114,7 +114,7 @@ input, textarea {
 }
 
 .overlay-button.services:hover {
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .5);
   border: 2px solid white;
   color:white;
   text-decoration: none;
