@@ -3,14 +3,36 @@ layout: default
 permalink: /index
 ---
 
+<script>
+  $(function (){
+    document.addEventListener("touchstart", function(){}, true);
+    document.addEventListener("touchend", function(){}, true);
+    // document.addEventListener("touchmove", function(){}, true);
+    document.addEventListener("touchcancel", function(){}, true);
+    var windowWidth = $(window).width();
+    if (windowWidth < 500) {
+      $('#create').css('font-size', '40px');
+    }
+  });
+  $(window).on('resize', function() {
+    var windowWidth = $(window).width();
+    if (windowWidth < 500) {
+      $('#create').css('font-size', '40px');
+    }
+    else {
+      $('#create').css('font-size', '90px');
+    }
+  });
+</script>
+
 <div class="image-overlay">
-  <h1 class="create topless">CREATE</h1>
+  <h1 id="create" class="create topless">CREATE</h1>
   <h3 style="margin:20px 0 40px 0;text-shadow: 2px 1px black;">music you love</h3>
   <a class="vision overlay-button" type="button" href="{{ site.github.url }}/about">OUR VISION</a>
   <a class="services overlay-button" type="button" href="{{ site.github.url }}/services">OUR SERVICES</a>
 </div>
 
-<img src="assets/grand_piano_performance_cropped.jpeg" width="100%">
+<img id="front-image" src="assets/grand_piano_performance_cropped.jpeg" width="100%">
 
 <div class="opt-in">
   <div class="content">

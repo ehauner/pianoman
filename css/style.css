@@ -78,7 +78,7 @@ input, textarea {
   transition: background-color 0.2s ease-in-out;
 }
 
-.send:hover {
+.send:hover, .send:active {
   background-color: #ffe6f9;
 }
 
@@ -106,14 +106,14 @@ input, textarea {
   text-shadow: 2px 1px black;
 }
 
-.overlay-button:hover {
+.overlay-button:hover, .overlay-button:active {
   background-color: #3399ff;
   border: 2px solid #3399ff;
   color:white;
   text-decoration: none;
 }
 
-.overlay-button.services:hover {
+.overlay-button.services:hover, .overlay-button.services:active {
   background-color: rgba(255, 255, 255, .5);
   border: 2px solid white;
   color:white;
