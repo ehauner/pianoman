@@ -9,17 +9,17 @@ permalink: /services
     var windowWidth = $(window).width();
     if (windowWidth < 665) {
       $('.services-box').removeClass('services-cell');
-      $('.services-box').addClass('full');
+      $('.services-box').addClass('services-full');
     }
   });
   $(window).on('resize', function() {
     var windowWidth = $(window).width();
     if (windowWidth < 665) {
       $('.services-box').removeClass('services-cell');
-      $('.services-box').addClass('full');
+      $('.services-box').addClass('services-full');
     }
     else {
-      $('.services-box').removeClass('full');
+      $('.services-box').removeClass('services-full');
       $('.services-box').addClass('services-cell');
     }
   });

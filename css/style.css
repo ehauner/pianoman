@@ -209,6 +209,11 @@ form {
   display:table-row;
 }
 
+.services-full {
+  width:100%;
+  padding:10px;
+}
+
 /* Contact page */
 .contact-left {
   width:50%;
