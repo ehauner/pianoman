@@ -29,6 +29,11 @@
   padding-top: 0;
 }
 
+.bottomless {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .left-half {
   width:50%;
   float:left;
@@ -176,19 +181,32 @@ form {
   height: 20px;
 }
 
-.service-cell {
+/* About page */
+.about-left {
+  display:table-cell;
+  width:50%;
+  vertical-align: top;
+  padding:20px 20px 20px 0;
+}
+
+.about-right {
+  display:table-cell;
+  width:50%;
+  vertical-align: top;
+  padding:20px 0 20px 20px;
+}
+
+.about-columns {
+  columns: auto 2;
+  column-gap: 40px;
+}
+
+/* Services page */
+.services-cell {
   display:table-cell;
   width:50%;
   vertical-align:top !important;
-  padding: 20px 20px;
-}
-
-.service-cell.left {
-  padding-right: 20px;
-}
-
-.service-cell.right {
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .grey {
@@ -197,4 +215,23 @@ form {
 
 .service-row {
   display:table-row;
+}
+
+/* Contact page */
+.contact-left {
+  width:50%;
+  float:left;
+  padding-right:20px;
+}
+
+.contact-right {
+  width:50%;
+  float:right;
+  padding-left:20px;
+}
+
+/* Universal */
+.full {
+  width:100%;
+  margin: 20px 0;
 }

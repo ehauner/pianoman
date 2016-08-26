@@ -4,20 +4,46 @@ layout: default
 permalink: /contact
 ---
 
+<script>
+  $(function (){
+    var windowWidth = $(window).width();
+    if (windowWidth < 665) {
+      $('#contact-left').removeClass('contact-left');
+      $('#contact-right').removeClass('contact-right');
+      $('#contact-left, #contact-right').addClass('full');
+    }
+  });
+  $(window).on('resize', function() {
+    var windowWidth = $(window).width();
+    if (windowWidth < 665) {
+      $('#contact-left').removeClass('contact-left');
+      $('#contact-right').removeClass('contact-right');
+      $('#contact-left, #contact-right').addClass('full');
+    }
+    else {
+      $('#contact-left, #contact-right').removeClass('full');
+      $('#contact-left').addClass('contact-left');
+      $('#contact-right').addClass('contact-right');
+    }
+  });
+</script>
 
 <div style="overflow:auto;">
 
+  <div class="grey" style="text-align:center;padding:20px;margin-bottom:20px;">
+    <h2 class="topless bottomless">(604) 910-2880</h2>
+  </div>
+
   <div class="content">
 
-    <div class="left-half">
+    <div id="contact-left" class="contact-left">
 
       <div id="map_canvas" style="height:400px;width:100%;"></div>
 
-      <h5>2 studio locations: Kitsilano and North Vancouver</h5>
-      <h3>604-910-2880</h3>
+      <p style="margin:10px 0;">2 studio locations: Kitsilano and North Vancouver</p>
     </div>
 
-    <div class="right-half">
+    <div id="contact-right" class="contact-right">
 
       <form action="https://formspree.io/{{ site.email }}"
           method="POST">
@@ -32,7 +58,7 @@ permalink: /contact
         <input class="send" type="submit" value="Send">
       </form>
 
-      <h5>Free Consultation</h5>
+      <p style="margin:10px 0;">Free Consultation</p>
 
     </div>
   </div>
