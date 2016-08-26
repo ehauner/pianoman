@@ -16,9 +16,9 @@
 title: Brennan Chan Piano Studio
 email: brennan.chan11@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Brennan Chan, Bachelor of Music, instructs piano lessons for beginners and intermediate pianists.
-  Accompanying for dance and singing.
-  Located in Kitsilano, Vancouver, UBC
+  Brennan Chan, Bachelor of Music, instructs piano lessons for beginners and
+  intermediate pianists. Accompanying for dance and singing. Located in
+  Kitsilano, Vancouver, UBC.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "ehauner.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb

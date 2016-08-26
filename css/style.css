@@ -139,13 +139,13 @@ form {
  /* Footer style */
 
 .site-footer {
-  color:white !important;
+  color:#cccccc !important;
+  font-size: 14px !important;
   background-color: #333333;
-  padding: 20px;
+  padding: 20px 0;
   width:100%;
   margin-top:20px;
   bottom:0;
-  font-size: 16px !important;
 }
 
  .footer-heading {
@@ -154,31 +154,23 @@ form {
 
 .footer-col-wrapper {
   display:table-row;
-  width:inherit;
 }
 
-.footer-col {
+.footer-col-left {
   display:table-cell;
+  width: 40%;
+  padding-right: 15px;
 }
 
-.footer-col-1{
-  width: 33%;
-  padding-right: 5px;
+.footer-col-right {
+  display:table-cell;
+  width: 60%;
+  padding-left: 15px;
 }
 
-.footer-col-2{
-  width: 34%;
-  padding: 0 20px;
-}
-
-.footer-col-3{
-  width: 33%;
-  padding-left: 5px;
-}
-
-.icon svg {
-  width: 20px;
-  height: 20px;
+.full-footer {
+  width: 100%;
+  margin: 5px;
 }
 
 /* About page */
